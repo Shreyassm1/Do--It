@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+body {
+  background-color: #f4f4f9;
+  transition: background-color 0.3s ease-in-out;
+  color: #333;
+}
+
+.main-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Nunito", sans-serif;
+}
+
+.header-text {
+  padding: 15px 20px;
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.incomplete-task-list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 15px 25px 15px;
+  background-color: #f4f4f9;
+  border-radius: 3px;
+  width: 35vw;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.incomplete-task-list {
+  width: 100%;
+}
+
+.incomplete-task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 5px;
+  margin-bottom: 10px;
+  border-bottom: 0.5px solid #9a9797;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.task-complete-checkbox {
+  margin-right: 15px;
+}
+
+.task-complete-checkbox input {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border: solid #333 2px;
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.task-complete-checkbox input:checked {
+  background-color: #059811;
+  border-color: #059811;
+}
+
+.task-complete-checkbox input:checked::after {
+  content: "\2713";
+  position: absolute;
+  bottom: -1px;
+  left: 1px;
+  font-size: 12px;
+  color: white;
+}
+
+.task-text {
+  flex: 1;
+  font-size: 16px;
+  color: #333;
+}
+
+.task-due-date {
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+  margin-right: 15px;
+}
+
+.task-important {
+  margin-right: 15px;
+  cursor: pointer;
+  color: #059811;
+}
+
+.task-delete .delete-icon {
+  cursor: pointer;
+  color: #888;
+  font-size: 18px;
+  transition: color 0.3s ease-in-out;
+  margin-left: 10px;
+}
+
+.task-delete .delete-icon:hover {
+  color: red;
+}
+
+.delete-button {
+  display: none;
+}
+
+.urgent-icon {
+  color: rgb(215, 2, 2);
+  margin-right: 10px;
+}
+
+/*---------------------------------------------------------------- CSS for mobile devices -------------------------------------------------*/
+
+@media (max-width: 1000px) {
+  .incomplete-task-item {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 2px 5px;
+  }
+
+  .task-complete-checkbox {
+    margin-bottom: 10px;
+  }
+
+  .task-due-date {
+    display: none;
+    margin-bottom: 10px;
+  }
+
+  .task-delete {
+    align-self: flex-end;
+    margin-bottom: 10px;
+  }
+
+  .urgent-icon {
+    display: none;
+  }
+
+  .incomplete-task-list-container {
+    padding: 5px;
+    width: 100%;
+  }
+}
+
+/*---------------------------------------------------------------- CSS for dark mode -------------------------------------------------*/
+
+body.dark-mode {
+  background-color: #31363f;
+  color: #f4f4f9;
+}
+
+body.dark-mode .incomplete-task-list-container {
+  background-color: #262a2f;
+}
+
+body.dark-mode .incomplete-task-item {
+  background-color: #262a2f;
+}
+
+body.dark-mode .task-complete-checkbox input {
+  border-color: #f4f4f9;
+}
+
+body.dark-mode .task-text {
+  color: #f4f4f9;
+}
+
+body.dark-mode .task-due-date {
+  color: #bbb;
+}
+
+body.dark-mode .task-important {
+  color: #1db954;
+}

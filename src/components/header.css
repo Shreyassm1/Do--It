@@ -1,0 +1,90 @@
+.header-container {
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.header-logo {
+  width: 100px;
+  height: 35px;
+}
+
+.logout-btn {
+  cursor: pointer;
+  padding: 10px;
+  font-size: 23px;
+  color: #31363f;
+  margin-left: 10px;
+  transition: color 0.5s ease-in-out;
+}
+
+.side-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.dark-light-toggle {
+  transition: color 0.4s ease-in-out;
+}
+
+.theme-text {
+  font-size: 15px;
+  color: #31363f;
+  margin-left: 3px;
+  font-weight: bolder;
+  text-decoration: wavy;
+  transition: color 0.4s ease-in-out;
+}
+
+/* CSS for mobile devices */
+
+@media (max-width: 1000px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    width: 100%;
+  }
+
+  .header-logo {
+    width: 120px;
+  }
+
+  .logout-btn {
+    margin-top: 10px;
+  }
+}
+
+/* CSS for dark mode */
+
+.dark-light-toggle {
+  cursor: pointer;
+}
+.dark-mode .header-container {
+  background-color: #222831;
+  color: #eeeeee;
+}
+
+.dark-mode .theme-text {
+  color: #eeeeee;
+}
+
+.dark-mode .logout-btn {
+  color: #eeeeee;
+}
+
+.dark-mode .dark-light-toggle {
+  color: #eeeeee;
+}
